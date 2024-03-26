@@ -131,13 +131,14 @@ const styles = StyleSheet.create({
   LocationBtn: {
     borderRadius: 20,
     alignItems: 'center',
-    backgroundColor: '#f2e6e6',
+    backgroundColor: '#fc0505',
     justifyContent: 'center',
     height: 45,
   },
   BtnTitleLoc: {
     fontSize: 20,
     fontWeight: '400',
+    color: '#d9a5a5',
   },
 });
 export default DetailsImage;

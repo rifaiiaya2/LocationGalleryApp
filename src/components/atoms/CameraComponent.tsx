@@ -20,6 +20,7 @@ import {MainNavigatorNavigationProp} from '../../navigation/Main.Navigator.types
 import {ImageLocation} from '../../navigation/Main.Navigator.types';
 import {postImageandLocationToAPI} from '../../api/PostToMockAPI';
 import Icon from 'react-native-vector-icons/AntDesign';
+import ImagePicker from 'react-native-image-crop-picker';
 
 interface ILocation {
   longitude: number;
@@ -101,6 +102,20 @@ const CameraComponent = () => {
       console.error('Error taking photo:', error);
     }
   };
+  const pickImage = async () => {
+    try {
+      const image = await ImagePicker.openPicker({
+        width: 300,
+        height: 400,
+        cropping: true,
+      });
+      console.log(image);
+      setCapturedImage(image.path);
+      getCurrentLocation();
+    } catch (error) {
+      console.error('Error picking image:', error);
+    }
+  };
   const getCurrentLocation = () => {
     Geolocation.getCurrentPosition(
       (position: GeolocationPosition) => {
@@ -150,6 +165,12 @@ const CameraComponent = () => {
           />
         )}
         <View style={styles.buttonContainer}>
+          <Pressable
+            style={styles.button}
+            onPress={pickImage}
+            android_ripple={{color: 'rgba(0, 0, 0, 0.1)'}}>
+            <Icon name="picture" size={34} color="white" />
+          </Pressable>
           <Pressable
             style={styles.button}
             onPress={takePhoto}
