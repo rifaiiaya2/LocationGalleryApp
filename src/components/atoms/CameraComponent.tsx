@@ -97,7 +97,6 @@ const CameraComponent = () => {
       console.log('Captured Image Path:', photoPath);
       setCapturedImage(photoPath);
       getCurrentLocation();
-      //closeCamera();
     } catch (error) {
       console.error('Error taking photo:', error);
     }

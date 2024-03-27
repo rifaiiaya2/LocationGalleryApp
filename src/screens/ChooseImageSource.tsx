@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import {MainNavigatorNavigationProp} from '../navigation/Main.Navigator.types';
 import camera from '../assets/Images/camera.png';
 import galleryImg from '../assets/Images/gallery.png';
-import background from '../assets/Images/backgImage.jpeg';
+import background from '../assets/Images/backImg.png';
 const ChooseImageSource = () => {
   const navigation = useNavigation<MainNavigatorNavigationProp>();
   const handleGallery = () => {
@@ -22,12 +22,12 @@ const ChooseImageSource = () => {
       style={styles.Container}>
       <ChooseImageBtn
         image={camera}
-        title="Take a Photo"
+        title="Camera"
         onPress={handleCameraClick}
       />
       <ChooseImageBtn
         image={galleryImg}
-        title="Photo Gallery"
+        title="Gallery"
         onPress={handleGallery}
       />
     </ImageBackground>
@@ -35,7 +35,7 @@ const ChooseImageSource = () => {
 };
 const styles = StyleSheet.create({
   Container: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

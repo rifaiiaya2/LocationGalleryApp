@@ -19,20 +19,20 @@ const ChooseImageBtn = ({image, title, onPress}: _IChooseImageBtn) => {
 };
 const styles = StyleSheet.create({
   container: {
-    margin: 35,
+    margin: 85,
     justifyContent: 'space-between',
     alignItems: 'center',
     marginVertical: 10,
   },
   image: {
-    width: 90,
-    height: 90,
-    opacity: 1,
+    width: 75,
+    height: 75,
+    opacity: 2,
     zIndex: 0,
   },
   title: {
     marginTop: 5,
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 40,
     fontWeight: '500',
     color: '#000',
