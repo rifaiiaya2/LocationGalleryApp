@@ -8,7 +8,10 @@ interface _IChooseImageBtn {
 }
 const ChooseImageBtn = ({image, title, onPress}: _IChooseImageBtn) => {
   return (
-    <Pressable style={styles.container} onPress={onPress}>
+    <Pressable
+      testID="choose-image-btn"
+      style={styles.container}
+      onPress={onPress}>
       <Image style={styles.image} source={image} />
       <Text style={styles.title}>{title}</Text>
     </Pressable>
