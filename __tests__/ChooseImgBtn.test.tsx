@@ -1,6 +1,6 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import ChooseImageBtn from '../src/components/atoms/ChooseImageBtn'; // Update the path to match your project structure
+import ChooseImageBtn from '../src/components/atoms/ChooseImageBtn';
 
 describe('ChooseImageBtn component', () => {
   it('renders correctly', () => {
