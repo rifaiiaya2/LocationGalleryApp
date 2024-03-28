@@ -1,5 +1,5 @@
 import {ToastAndroid} from 'react-native';
-import ToastDelete from '../src/components/atoms/ToastDelete'; // Update the path to match your project structure
+import ToastDelete from '../src/components/atoms/ToastDelete';
 
 jest.mock('react-native', () => ({
   ToastAndroid: {
